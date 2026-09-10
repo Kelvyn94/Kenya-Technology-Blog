@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kenya Tech Blog — Software, Startups &amp; the Silicon Savannah</title>
+<meta name="description" content="News, programming tutorials, career advice and event coverage for Kenya's software developer community.">
+<meta name="theme-color" content="#11151A">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Kenya Tech Blog">
+<meta property="og:description" content="Technology trends, software development and career news for Kenyan developers.">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main-content">Skip to content</a>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header" id="site-header">
+  <div class="header-inner">
+    <a href="#" class="logo" aria-label="Kenya Tech Blog home">
+      <span class="logo-mark" aria-hidden="true">&lt;/&gt;</span>
+      <span class="logo-text">Kenya Tech<span class="logo-accent">Blog</span></span>
+    </a>
+
+    <nav class="main-nav" id="main-nav" aria-label="Primary">
+      <ul>
+        <li><a href="#" data-nav-category="tech-news">Tech News</a></li>
+        <li><a href="#" data-nav-category="programming">Programming</a></li>
+        <li><a href="#" data-nav-category="career">Career</a></li>
+        <li><a href="#" data-nav-category="local-events">Local Events</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <div class="search-wrap">
+        <button class="icon-btn search-toggle" id="search-toggle" aria-expanded="false" aria-controls="search-input" aria-label="Open search">
+          <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+        <input type="search" id="search-input" class="search-input" placeholder="Search articles…" aria-label="Search articles">
+      </div>
+
+      <button class="icon-btn theme-toggle" id="theme-toggle" aria-label="Switch to light theme" aria-pressed="false">
+        <svg class="icon-moon" viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      </button>
+
+      <button class="icon-btn mobile-menu-toggle" id="mobile-menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Open menu">
+        <span class="hamburger"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main-content">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" aria-labelledby="hero-heading">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <span class="hero-kicker">Breaking · Nairobi</span>
+        <h1 id="hero-heading">Safaricom opens its M-Pesa Daraja API sandbox to student developers nationwide</h1>
+        <p class="hero-excerpt">A new no-cost sandbox tier means final-year CS students from Nairobi to Kisumu can now prototype payment integrations without enterprise approval — we spoke to three campus teams already shipping on it.</p>
+        <div class="hero-meta">
+          <span>By Wanjiru Kamau</span>
+          <span class="dot" aria-hidden="true">•</span>
+          <span>6 min read</span>
+          <span class="dot" aria-hidden="true">•</span>
+          <span>Tech News</span>
+        </div>
+        <a href="#" class="btn btn-primary">Read the full story</a>
+      </div>
+
+      <div class="hero-terminal" aria-hidden="true">
+        <div class="terminal-bar">
+          <span class="dot-red"></span><span class="dot-amber"></span><span class="dot-green"></span>
+          <span class="terminal-title">fetch-news.sh</span>
+        </div>
+        <div class="terminal-body">
+          <p class="term-line"><span class="term-prompt">ktb@nairobi</span>:<span class="term-path">~</span>$ <span id="term-command"></span><span class="term-cursor">&#9608;</span></p>
+          <p class="term-output" id="term-output"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CATEGORY FILTER ============ -->
+  <nav class="filter-bar" aria-label="Filter articles by category">
+    <div class="filter-inner">
+      <button class="filter-pill is-active" data-filter="all">All posts</button>
+      <button class="filter-pill" data-filter="tech-news">Tech News</button>
+      <button class="filter-pill" data-filter="programming">Programming</button>
+      <button class="filter-pill" data-filter="career">Career</button>
+      <button class="filter-pill" data-filter="local-events">Local Events</button>
+    </div>
+  </nav>
+
+  <!-- ============ CONTENT GRID ============ -->
+  <div class="content-layout">
+
+    <section class="article-grid" id="article-grid" aria-label="Articles">
+      <!-- Cards injected/filtered by script.js; static markup below for no-JS baseline -->
+
+      <article class="card card--large" data-category="programming">
+        <a href="#" class="card-link">
+          <div class="card-media" style="--card-img: linear-gradient(135deg,#1c2b2a,#0f1a19);">
+            <span class="card-tag" data-tag="programming">Programming</span>
+          </div>
+          <div class="card-body">
+            <h3>Building offline-first apps for Kenya's patchy 3G: a Flutter case study from Kisumu</h3>
+            <p>How a team at a Kisumu-based agritech startup cut data costs 70% for farmers using local-first sync patterns and SQLite caching.</p>
+            <div class="card-meta"><span>David Otieno</span><span class="dot">•</span><span>9 min read</span><span class="dot">•</span><time datetime="2026-09-08">Sep 8</time></div>
+          </div>
+        </a>
+      </article>
+
+      <article class="card" data-category="career">
+        <a href="#" class="card-link">
+          <div class="card-media" style="--card-img: linear-gradient(135deg,#2a2116,#1a140d);">
+            <span class="card-tag" data-tag="career">Career</span>
+          </div>
+          <div class="card-body">
+            <h3>Negotiating remote salaries as a Kenyan engineer: what to actually ask for</h3>
+            <p>Cost-of-living arbitrage, currency risk and contract structures — advice from devs earning USD while based in Nairobi.</p>
+            <div class="card-meta"><span>Achieng Odhiambo</span><span class="dot">•</span><span>7 min read</span><span class="dot">•</span><time datetime="2026-09-07">Sep 7</time></div>
+          </div>
+        </a>
+      </article>
+
+      <article class="card" data-category="local-events">
+        <a href="#" class="card-link">
+          <div class="card-media" style="--card-img: linear-gradient(135deg,#241a2c,#150f1a);">
+            <span class="card-tag" data-tag="local-events">Local Events</span>
+          </div>
+          <div class="card-body">
+            <h3>Nairobi Garage hosts its biggest hackathon yet: 400 devs, 48 hours, one theme — climate fintech</h3>
+            <p>Registration opens this week for teams of up to four. Past winners have gone on to raise pre-seed funding within six months.</p>
+            <div class="card-meta"><span>Brian Mutiso</span><span class="dot">•</span><span>4 min read</span><span class="dot">•</span><time datetime="2026-09-06">Sep 6</time></div>
+          </div>
+        </a>
+      </article>
+
+      <article class="card" data-category="tech-news">
+        <a href="#" class="card-link">
+          <div class="card-media" style="--card-img: linear-gradient(135deg,#1a2230,#10151f);">
+            <span class="card-tag" data-tag="tech-news">Tech News</span>
+          </div>
+          <div class="card-body">
+            <h3>Kenya's data protection watchdog issues new guidance for fintech startups handling biometric KYC</h3>
+            <p>The ODPC's updated circular tightens consent requirements — here's what founders building lending apps need to change.</p>
+            <div class="card-meta"><span>Faith Njeri</span><span class="dot">•</span><span>5 min read</span><span class="dot">•</span><time datetime="2026-09-05">Sep 5</time></div>
+          </div>
+        </a>
+      </article>
+
+      <article class="card" data-category="programming">
+        <a href="#" class="card-link">
+          <div class="card-media" style="--card-img: linear-gradient(135deg,#1c2b2a,#0f1a19);">
+            <span class="card-tag" data-tag="programming">Programming</span>
+          </div>
+          <div class="card-body">
+            <h3>Rust on the edge: why a Mombasa logistics startup rewrote its routing engine</h3>
+            <p>Latency dropped from 400ms to 40ms after moving off a Python monolith. Their CTO walks through the migration, warts and all.</p>
+            <div class="card-meta"><span>Samuel Kiptoo</span><span class="dot">•</span><span>11 min read</span><span class="dot">•</span><time datetime="2026-09-04">Sep 4</time></div>
+          </div>
+        </a>
+      </article>
+
+      <article class="card" data-category="career">
+        <a href="#" class="card-link">
+          <div class="card-media" style="--card-img: linear-gradient(135deg,#2a2116,#1a140d);">
+            <span class="card-tag" data-tag="career">Career</span>
+          </div>
+          <div class="card-body">
+            <h3>From Moringa School to Andela: three grads on what actually got them hired</h3>
+            <p>It wasn't the certificate. Three bootcamp alumni break down the portfolio projects and networking that made the difference.</p>
+            <div class="card-meta"><span>Grace Wambui</span><span class="dot">•</span><span>8 min read</span><span class="dot">•</span><time datetime="2026-09-03">Sep 3</time></div>
+          </div>
+        </a>
+      </article>
+
+      <p class="no-results" id="no-results" hidden>No articles in this category yet — check back soon.</p>
+    </section>
+
+    <!-- ============ SIDEBAR ============ -->
+    <aside class="sidebar" aria-label="Sidebar">
+
+      <section class="widget trending-widget">
+        <h2>Trending this week</h2>
+        <ol class="trending-list">
+          <li><a href="#"><span class="trend-num">1</span><span>Why Nairobi is being called East Africa's most funded startup city, three years running</span></a></li>
+          <li><a href="#"><span class="trend-num">2</span><span>A beginner's guide to shipping your first Chrome extension</span></a></li>
+          <li><a href="#"><span class="trend-num">3</span><span>Interview: the engineer behind Twiga Foods' inventory prediction model</span></a></li>
+          <li><a href="#"><span class="trend-num">4</span><span>Should you learn Go or Rust in 2026? Kenyan backend devs weigh in</span></a></li>
+        </ol>
+      </section>
+
+      <section class="widget newsletter-widget">
+        <h2>The Weekly Compile</h2>
+        <p>One email, every Friday — Kenya tech news, new job postings and one worthwhile read. No spam.</p>
+        <form id="newsletter-form" novalidate>
+          <label for="newsletter-email" class="visually-hidden">Email address</label>
+          <input type="email" id="newsletter-email" name="email" placeholder="you@example.com" required autocomplete="email">
+          <button type="submit" class="btn btn-primary btn-block">Subscribe</button>
+          <p class="form-status" id="newsletter-status" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section class="widget community-widget">
+        <h2>Join the community</h2>
+        <ul class="community-links">
+          <li><a href="#"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.79-.25.79-.55v-2.15c-3.2.7-3.88-1.36-3.88-1.36-.52-1.34-1.28-1.7-1.28-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.59.24 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.4-5.27 5.69.42.36.78 1.07.78 2.16v3.2c0 .3.21.66.8.55A10.51 10.51 0 0 0 23.5 12c0-6.35-5.15-11.5-11.5-11.5Z"/></svg>GitHub</a></li>
+          <li><a href="#"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M18.9 1.5h3.68l-8.04 9.19L24 22.5h-7.4l-5.8-7.58-6.64 7.58H.47l8.6-9.83L0 1.5h7.59l5.24 6.93L18.9 1.5Zm-1.3 18.8h2.04L6.5 3.6H4.3l13.3 16.7Z"/></svg>X / Twitter</a></li>
+          <li><a href="#"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M20.32 3.68A19.8 19.8 0 0 0 15.31 2c-.24.44-.5 1.02-.69 1.48a18.3 18.3 0 0 0-5.24 0A13 13 0 0 0 8.68 2a19.7 19.7 0 0 0-5.01 1.68C1.03 8.13.35 12.46.68 16.73a19.9 19.9 0 0 0 5.99 3.02c.49-.66.92-1.36 1.29-2.1-.71-.26-1.38-.58-2.02-.97.17-.12.34-.25.5-.38a14.2 14.2 0 0 0 11.1 0c.16.13.33.26.5.38-.64.39-1.32.71-2.02.97.37.74.8 1.44 1.29 2.1a19.8 19.8 0 0 0 5.99-3.02c.4-4.95-.83-9.23-3.98-13.05ZM9.68 14.3c-.98 0-1.79-.9-1.79-2.02 0-1.11.79-2.02 1.79-2.02 1 0 1.81.91 1.79 2.02 0 1.11-.79 2.02-1.79 2.02Zm6.02 0c-.98 0-1.79-.9-1.79-2.02 0-1.11.79-2.02 1.79-2.02 1 0 1.81.91 1.79 2.02 0 1.11-.78 2.02-1.79 2.02Z"/></svg>Discord</a></li>
+          <li><a href="#"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 .5C5.65.5.5 5.72.5 12.15c0 2.14.57 4.15 1.56 5.88L.5 23.5l5.65-1.5a11.4 11.4 0 0 0 5.85 1.6c6.35 0 11.5-5.22 11.5-11.65C23.5 5.72 18.35.5 12 .5Zm0 21.06c-1.9 0-3.68-.53-5.2-1.44l-.37-.22-3.36.89.9-3.32-.24-.34a9.5 9.5 0 0 1-1.5-5.14c0-5.33 4.31-9.65 9.63-9.65 5.13 0 9.63 4.32 9.63 9.65 0 5.33-4.31 9.57-9.49 9.57Zm5.28-7.17c-.29-.14-1.7-.84-1.96-.94-.26-.1-.46-.14-.65.14-.19.29-.75.94-.92 1.13-.17.19-.34.22-.63.07-.29-.14-1.22-.45-2.32-1.43-.86-.76-1.44-1.7-1.6-1.99-.17-.29-.02-.44.12-.59.13-.13.29-.34.43-.51.15-.17.19-.29.29-.48.1-.19.05-.36-.02-.5-.07-.14-.65-1.57-.9-2.15-.24-.57-.48-.49-.65-.5h-.56c-.19 0-.5.07-.77.36-.26.29-1 .98-1 2.4 0 1.41 1.03 2.77 1.17 2.96.14.19 2.03 3.1 4.92 4.35.69.3 1.22.47 1.64.6.69.22 1.32.19 1.81.11.55-.08 1.7-.7 1.94-1.37.24-.67.24-1.24.17-1.36-.07-.12-.26-.19-.55-.34Z"/></svg>WhatsApp community</a></li>
+        </ul>
+      </section>
+
+    </aside>
+  </div>
+
+  <!-- ============ LOCAL EVENTS STRIP ============ -->
+  <section class="events-strip" aria-labelledby="events-heading">
+    <div class="events-inner">
+      <h2 id="events-heading">Upcoming in Nairobi &amp; beyond</h2>
+      <div class="events-scroll">
+        <div class="event-card">
+          <span class="event-date"><span class="event-day">21</span><span class="event-mon">Sep</span></span>
+          <div><h3>DevFest Nairobi 2026</h3><p>Ngong Road Innovation Hub · GDG Nairobi</p></div>
+        </div>
+        <div class="event-card">
+          <span class="event-date"><span class="event-day">04</span><span class="event-mon">Oct</span></span>
+          <div><h3>Nairobi Garage Climate-Fintech Hackathon</h3><p>Nairobi Garage, Karen · 48 hours</p></div>
+        </div>
+        <div class="event-card">
+          <span class="event-date"><span class="event-day">17</span><span class="event-mon">Oct</span></span>
+          <div><h3>Women in Tech Kenya — Mentorship Night</h3><p>iHub, Senteu Plaza</p></div>
+        </div>
+        <div class="event-card">
+          <span class="event-date"><span class="event-day">02</span><span class="event-mon">Nov</span></span>
+          <div><h3>PyCon Kenya Meetup #34</h3><p>Nailab, Bishop Magua Centre</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer" id="about">
+  <div class="footer-inner">
+    <div class="footer-col footer-about">
+      <a href="#" class="logo">
+        <span class="logo-mark" aria-hidden="true">&lt;/&gt;</span>
+        <span class="logo-text">Kenya Tech<span class="logo-accent">Blog</span></span>
+      </a>
+      <p>Independent coverage of software, startups and developer life across Kenya — written by the community it covers.</p>
+    </div>
+
+    <div class="footer-col">
+      <h3>Categories</h3>
+      <ul>
+        <li><a href="#">Tech News</a></li>
+        <li><a href="#">Programming</a></li>
+        <li><a href="#">Career</a></li>
+        <li><a href="#">Local Events</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h3>Site</h3>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Write for us</a></li>
+        <li><a href="#">Privacy</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h3>Elsewhere</h3>
+      <ul class="footer-social">
+        <li><a href="#">GitHub</a></li>
+        <li><a href="#">X / Twitter</a></li>
+        <li><a href="#">Discord</a></li>
+        <li><a href="#">WhatsApp</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2026 Kenya Tech Blog. Built for Kenyan developers.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
